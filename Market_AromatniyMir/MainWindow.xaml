@@ -1,0 +1,97 @@
+﻿<Window x:Class="Market_AromatniyMir.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Market_AromatniyMir"
+        mc:Ignorable="d"
+        Title="Авторизация" Icon="/icon.ico" Height="560" 
+        Width="512" 
+        MinHeight="560" 
+        MaxWidth="512" 
+        MinWidth="512">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" 
+                    VerticalAlignment="Top" 
+                    Background="Wheat" 
+                    Grid.ColumnSpan="4">
+
+            <Image Height="128" 
+                   HorizontalAlignment="Left" 
+                   Source="/logo.png"
+                   >
+            </Image>
+        </StackPanel>
+        
+        <Button x:Name="LoginButton"
+                    Grid.Row="7" Grid.Column="1"
+                    Width="120" 
+                    Height="32" 
+                    Background="DarkOrange" 
+                    HorizontalAlignment="Left" Click="LoginButton_Click">
+            <TextBlock FontFamily="Comic Sans MS" 
+                           FontSize="16" 
+                           Foreground="White">
+                    Войти
+            </TextBlock>
+        </Button>
+        
+        <TextBlock FontFamily="Comic Sans MS"
+                   Grid.Row="1" 
+                   Grid.Column="1"
+                   FontSize="24" 
+                   HorizontalAlignment="Left">
+                Логин:
+        </TextBlock>
+        <TextBlock FontFamily="Comic Sans MS"
+                   Grid.Row="2" 
+                   Grid.Column="1"
+                   FontSize="24" 
+                   HorizontalAlignment="Left">
+                Пароль:
+        </TextBlock>
+        <PasswordBox x:Name="PassBox" 
+                         Height="45" 
+                         Width="270"
+                         Grid.Row="2" 
+                         Grid.Column="1"
+                         VerticalAlignment="Bottom">
+        </PasswordBox>
+        <TextBox x:Name="LoginBox" 
+                     Height="45" 
+                     Width="270"
+                     Grid.Row="1" 
+                     Grid.Column="1"
+                     VerticalAlignment="Bottom">
+        </TextBox>
+        <Button x:Name="GuestButton"
+                Grid.Row="1" 
+                Grid.Column="2"
+                Height="32" Width="64" 
+                Background="DarkOrange" VerticalAlignment="Bottom" Click="GuestButton_Click">
+            <TextBlock FontFamily="Comic Sans MS" 
+                       FontSize="16" 
+                       Foreground="White">
+                Гость
+            </TextBlock>
+        </Button>
+    </Grid>
+</Window>
